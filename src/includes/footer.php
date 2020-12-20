@@ -1,3 +1,3 @@
-<script src="js/scripts.js"></script>
+<script src="/src/public/js/index.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
     <h1>Calculator materiale poarta</h1>
 
 <div>
-    <img src="./src/public/assests/poarta_13.jpg" alt="imagine poarta selectata" id="display_poarta">
+    <img src="src/public/assets/poarta_13.jpg" alt="imagine poarta selectata" id="display_poarta">
     <form action="gate.php" method="post">
         <label>
             <select name="select_poarta" id="select_poarta">
