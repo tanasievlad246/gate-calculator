@@ -1,9 +1,13 @@
 <?php
 if (isset($_POST['calculeaza'])) {
 include './src/includes/header.php';
+include './src/classes/ConstructorPoarta.php';
 
-//echo var_dump($_POST);
-print_r(var_dump($_POST));
+$constructor_poarta = new ConstructorPoarta();
+
+$poarta = $constructor_poarta->poarta_13(1800,1000,3000);
+
+    print("<pre>".print_r($poarta,true)."</pre>");
 
 include './src/includes/footer.php';
 } else {
