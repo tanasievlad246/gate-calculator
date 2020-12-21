@@ -31,12 +31,12 @@ class ConstructorPoarta
     //Returneaza un array cu specificatiile portii pietonale si portii auto
     public function poarta12(int $inaltime, int $poarta_pietonala_latime, int $poarta_auto_latime): array {
         $cadru = $this->construieste_cadru($inaltime, $poarta_pietonala_latime, $poarta_auto_latime, $this->profil_cadru);
-        $distanta_elemente = $cadru['inaltime_interior'] * 0.03; //Distanta intre elemente in milimetri 3% din inaltimea interioara
+        $distanta_elemente = $cadru['inaltime_interior'] * 0.025; //Distanta intre elemente in milimetri 3% din inaltimea interioara
         $spatiu_elemente_mici = $cadru['inaltime_interior'] * 0.3; //30% elemente mici
         $spatiu_elemente_mari = $cadru['inaltime_interior'] * 0.7; //70% elemente marii
 
-        $numar_elemente_mici = round(($spatiu_elemente_mici / $distanta_elemente));
-        $numar_elemente_mari = round(($spatiu_elemente_mari / $distanta_elemente));
+        $numar_elemente_mici = round(($spatiu_elemente_mici / $distanta_elemente) / 2);
+        $numar_elemente_mari = round(($spatiu_elemente_mari / $distanta_elemente) / 2);
 
         $total_material_elemente = [
             "poarta_auto" => [
