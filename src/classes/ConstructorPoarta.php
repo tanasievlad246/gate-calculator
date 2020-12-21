@@ -40,17 +40,23 @@ class ConstructorPoarta
 
         $total_material_elemente = [
             "poarta_auto" => [
-                "total_elemente_mici" => $cadru['poarta_auto']['latime_interior'] * $numar_elemente_mici,
-                "total_elemente_mari" => $cadru['poarta_auto']['latime_interior'] * $numar_elemente_mari,
+                "total_elemente_mici" => $numar_elemente_mici * 2,
+                "total_elemente_mari" => $numar_elemente_mari * 2,
+                "material_elemente_mici" => ($numar_elemente_mici * 2) * $poarta_auto_latime,
+                "material_elemente_mari" => ($numar_elemente_mari * 2) * $poarta_auto_latime
             ],
             "poarta_pietonala" => [
-                "total_elemente_mici" => $cadru['poarta_pietonala']['latime_interior'] * $numar_elemente_mici,
-                "total_elemente_mari" => $cadru['poarta_pietonala']['latime_interior'] * $numar_elemente_mari,
+                "total_elemente_mici" => $numar_elemente_mici,
+                "total_elemente_mari" => $numar_elemente_mari,
+                "material_elemente_mici" => $numar_elemente_mici * $poarta_pietonala_latime,
+                "material_elemente_mari" => $numar_elemente_mari * $poarta_pietonala_latime
             ]
         ];
 
         $poarta = [
+            "nume" => "Poarta 12",
             "inaltime" => $cadru['inaltime'],
+            "spec_elemente_cadru" => $cadru['spec_elemente_cadru'],
             "poarta_auto" => $cadru['poarta_auto'],
             "poarta_pietonala" => $cadru['poarta_pietonala'],
             "elemente_interioare" => [
@@ -78,17 +84,23 @@ class ConstructorPoarta
 
         $total_material_elemente = [
             "poarta_auto" => [
-                "total_elemente_mici" => $cadru['poarta_auto']['latime_interior'] * $numar_elemente_mici,
-                "total_elemente_mari" => $cadru['poarta_auto']['latime_interior'] * $numar_elemente_mari,
+                "total_elemente_mici" => $numar_elemente_mici * 2,
+                "total_elemente_mari" => $numar_elemente_mari * 2,
+                "material_elemente_mici" => ($numar_elemente_mici * 2) * $poarta_auto_latime,
+                "material_elemente_mari" => ($numar_elemente_mari * 2) * $poarta_auto_latime
             ],
             "poarta_pietonala" => [
-                "total_elemente_mici" => $cadru['poarta_pietonala']['latime_interior'] * $numar_elemente_mici,
-                "total_elemente_mari" => $cadru['poarta_pietonala']['latime_interior'] * $numar_elemente_mari,
+                "total_elemente_mici" => $numar_elemente_mici,
+                "total_elemente_mari" => $numar_elemente_mari,
+                "material_elemente_mici" => $numar_elemente_mici * $poarta_pietonala_latime,
+                "material_elemente_mari" => $numar_elemente_mari * $poarta_pietonala_latime
             ]
         ];
 
         $poarta = [
+            "nume" => "Poarta 13",
             "inaltime" => $cadru['inaltime'],
+            "spec_elemente_cadru" => $cadru['spec_elemente_cadru'],
             "poarta_auto" => $cadru['poarta_auto'],
             "poarta_pietonala" => $cadru['poarta_pietonala'],
             "elemente_interioare" => [
@@ -120,7 +132,7 @@ class ConstructorPoarta
             "latime_neta" => $latime_neta_pietonala,
             "latime_interior" => $latime_neta_pietonala - ($cadru['h'] * 2),
             "total_material" => [
-                "varticala" => $inaltime * 2,
+                "verticala" => $inaltime * 2,
                 "orizontala" => $latime_neta_pietonala * 2
             ]
         ];
@@ -130,7 +142,7 @@ class ConstructorPoarta
             "latime_interior" => $latime_neta_auto - ($cadru['h'] * 2),
             "latime_poarta" => $latime_neta_auto / 2,
             "total_material" => [
-                "varticala" => $inaltime * 2,
+                "verticala" => $inaltime * 2,
                 "orizontala" => $latime_neta_auto * 2
             ]
         ];
@@ -138,6 +150,10 @@ class ConstructorPoarta
         return [
             "inaltime" => $inaltime,
             "inaltime_interior" => $inaltime - ($cadru['h'] * 2),
+            "spec_elemente_cadru" => [
+                "nume" => $cadru['nume'],
+                "grad_taiere" => $cadru['grad_taiere']
+            ],
             "numar_profile_cadru" => [
                 "verticala" => 2,
                 "orizontala" => 2
