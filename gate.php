@@ -5,7 +5,7 @@ include './src/classes/ConstructorPoarta.php';
 
 $constructor_poarta = new ConstructorPoarta();
 
-$poarta = $constructor_poarta->poarta_13(1800,1000,3000);
+$poarta = $constructor_poarta->poarta12(1800,1000,3000);
 
     print("<pre>".print_r($poarta,true)."</pre>");
 
