@@ -35,8 +35,8 @@ class ConstructorPoarta
         $spatiu_elemente_mici = $cadru['inaltime_interior'] * 0.3; //30% elemente mici
         $spatiu_elemente_mari = $cadru['inaltime_interior'] * 0.7; //70% elemente marii
 
-        $numar_elemente_mici = round(($spatiu_elemente_mici / $distanta_elemente) / 2);
-        $numar_elemente_mari = round(($spatiu_elemente_mari / $distanta_elemente) / 2);
+        $numar_elemente_mici = round(($spatiu_elemente_mici / $distanta_elemente));
+        $numar_elemente_mari = round(($spatiu_elemente_mari / $distanta_elemente));
 
         $total_material_elemente = [
             "poarta_auto" => [
@@ -56,6 +56,7 @@ class ConstructorPoarta
         $poarta = [
             "nume" => "Poarta 12",
             "inaltime" => $cadru['inaltime'],
+            "inaltime_interior" => $cadru['inaltime_interior'],
             "spec_elemente_cadru" => $cadru['spec_elemente_cadru'],
             "poarta_auto" => $cadru['poarta_auto'],
             "poarta_pietonala" => $cadru['poarta_pietonala'],
@@ -101,6 +102,7 @@ class ConstructorPoarta
             "nume" => "Poarta 13",
             "inaltime" => $cadru['inaltime'],
             "spec_elemente_cadru" => $cadru['spec_elemente_cadru'],
+            "inaltime_interior" => $cadru['inaltime_interior'],
             "poarta_auto" => $cadru['poarta_auto'],
             "poarta_pietonala" => $cadru['poarta_pietonala'],
             "elemente_interioare" => [
