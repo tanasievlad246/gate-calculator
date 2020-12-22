@@ -131,7 +131,7 @@ if (isset($_POST['calculeaza'])) {
                 </table>       
             </div>
         </div>
-    EOT;
+EOT;
 
     include './src/includes/footer.php';
 } else {
